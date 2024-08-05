@@ -5,10 +5,11 @@ import ProjectsContainer from './ProjectsContainer'
 
 const Project = () => {
   return (
-    <div className='wrapper'>
+    <div className='wrapper' data-aos="fade-in"
+    data-duration='2000'>
        <Title text={'Projects'}/>
          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center'>
-         <ProjectsContainer 
+         <ProjectsContainer
               img={amazonClone.src} 
               link={''}
               text='Full Stack Amazon Clone with signIn & signUp feature redux-toolkit for Add to cart feature'/>

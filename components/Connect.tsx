@@ -4,7 +4,7 @@ import ConnectContainer from './ConnectContainer'
 
 const Connect = () => {
   return (
-    <div className='wrapper '>
+    <div className='wrapper' data-aos="fade-in">
      <div className='max-w-5xl mx-auto flex flex-col gap-4 items-center justify-center'>
      <h2 className='text-2xl font-bold text-center '>Let us create awesome products!</h2>
       <p className='text-lg tracking-wide font-medium text-center'>
@@ -19,11 +19,13 @@ const Connect = () => {
     <div className='mt-10 flex justify-center flex-wrap gap-12'>
 <ConnectContainer 
      link='https://github.com/dushyant4665'
-     socialText='Github'/>
+     socialText='Github'
+     />
 
 <ConnectContainer 
      link='https://x.com/dushyant4665'
-     socialText='Twitter'/>
+     socialText='Twitter'
+     />
 
 <ConnectContainer 
      link='https://www.linkedin.com/in/dushyant-khandelwal-516319221/'

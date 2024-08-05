@@ -1,16 +1,17 @@
 
 
-const SkillsContainer = ({skilled,icon,link}:props) => {
+const SkillsContainer = ({ title, link }: Props)  => {
   return (
-    <a href={link}>
-           <div>
-          <div className='items-center gap-8 '>
-          <span className='w-12 h-12 rounded-full place-items-center text-5xl'> {icon}</span>
-          <p className='text-lg font-semibold text-gray-400'>{skilled}</p>
-          </div>
-      </div>
-    </a>
+    <a href={link} target="_blank" data-aos='fade-right'>
+    <p className="border border-blue-800 px-6 py-2 text-lg tracking-wide bg-transparent text-gray-400 hover:text-white hover:border-blue-600 hover:bg-black rounded-lg duration-300">
+      {title}
+    </p>
+  </a>
   )
 }
+
+
+
+
 
 export default SkillsContainer

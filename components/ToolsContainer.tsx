@@ -8,7 +8,6 @@ const ToolsContainer = ({title,icon}:props) => {
           <a href="">
           <p className='text-lg font-semibold text-gray-400'>{title}</p>
           </a>
-             
         </div>
    </div> 
   )
