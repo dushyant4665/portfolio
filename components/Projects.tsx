@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from './Title'
-import amazonClone from '../images/amazonClone.webp'
+import projectIMG1 from '../images/projectIMG1.png'
 import ProjectsContainer from './ProjectsContainer'
 
 const Project = () => {
@@ -10,24 +10,10 @@ const Project = () => {
        <Title text={'Projects'}/>
          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center'>
          <ProjectsContainer
-              img={amazonClone.src} 
-              link={''}
-              text='Full Stack Amazon Clone with signIn & signUp feature redux-toolkit for Add to cart feature'/>
-             <ProjectsContainer
-              img={amazonClone.src} 
-              text='Full Stack Amazon Clone with signIn & signUp feature redux-toolkit for Add to cart feature'/>
-               <ProjectsContainer 
-              img={amazonClone.src} 
-              text='Full Stack Amazon Clone with signIn & signUp feature redux-toolkit for Add to cart feature'/>
-               <ProjectsContainer 
-              img={amazonClone.src} 
-              text='Full Stack Amazon Clone with signIn & signUp feature redux-toolkit for Add to cart feature'/>
-               <ProjectsContainer 
-              img={amazonClone.src} 
-              text='Full Stack Amazon Clone with signIn & signUp feature redux-toolkit for Add to cart feature'/>
-               <ProjectsContainer 
-              img={amazonClone.src} 
-              text='Full Stack Amazon Clone with signIn & signUp feature redux-toolkit for Add to cart feature'/> 
+              img={projectIMG1.src} 
+              link={'https://crispshoppingdushyant.vercel.app/'}
+              text='Full Stack MERN Ecommerce Web App with Firbase Google Authentication And Stripe Payment Gateway Feature'/>
+            
          </div>  
     </div>
   )

@@ -6,65 +6,64 @@ import { VscVscode } from "react-icons/vsc";
 import { SiIntellijidea } from "react-icons/si";
 import { SiReplit } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
-import { DiMongodb } from "react-icons/di";
+import { BsDatabaseSlash } from "react-icons/bs";
 import { SiPostman } from "react-icons/si";
-import { FaGithub } from "react-icons/fa";
-import { RiTailwindCssFill } from "react-icons/ri";
+import NetWorkContainer from './NetworkContainer';
 
-const Tools = () => {
+const Networks = () => {
   return (
     <div className="wrapper space-y-10" data-aos='fade-right'>
-      <Title text={"Developer Tools"}/>
+      <Title text={"Networking Tools"}/>
       <div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-[45px] place-items-center ml-8 mr-8'>
         <div className=" text-blue-500 hover:text-opacity-70 duration-300 " data-aos='fade-right'>
-          <ToolsContainer
+          <NetWorkContainer
             title='VS Code'
             icon={<VscVscode />} />
         </div>
-        <div className="text-white hover:text-opacity-70 duration-300" data-aos='fade-left'>
-          <ToolsContainer
+        <div className="text-white hover:text-opacity-70 duration-300" data-aos='fade-right'>
+          <NetWorkContainer
             title='Intellij IDEA'
             icon={<SiIntellijidea />} />
         </div>
         <div className="text-orange-600 hover:text-opacity-70 duration-300" data-aos='fade-right'>
-          <ToolsContainer
+          <NetWorkContainer
             title='Replit'
             icon={<SiReplit />} />
         </div>
-        <div className="text-gray-600 hover:text-opacity-70 duration-300" data-aos='fade-left'>
-          <ToolsContainer
-            title='GitHub'
-            icon={<FaGithub />} />
+        <div className="text-green-600 hover:text-opacity-70 duration-300" data-aos='fade-right'>
+          <NetWorkContainer
+            title='Node.Js'
+            icon={<FaNodeJs />} />
         </div>
         <div className="text-yellow-600 hover:text-opacity-70 duration-300" data-aos='fade-right'>
-          <ToolsContainer
+          <NetWorkContainer
             title='Firebase'
             icon={<IoLogoFirebase />} />
         </div>
-        <div className="text-green-700 hover:text-opacity-70 duration-300" data-aos='fade-left'>
-          <ToolsContainer
-            title='Mongodb'
-            icon={<DiMongodb />} />
+        <div className="text-gray-600 hover:text-opacity-70 duration-300" data-aos='fade-right'>
+          <NetWorkContainer
+            title='NoSQl DataBases'
+            icon={<BsDatabaseSlash />} />
         </div>
         <div className="text-orange-500 hover:text-opacity-70 duration-300" data-aos='fade-right'>
-          <ToolsContainer
+          <NetWorkContainer
             title='PostMan'
             icon={<SiPostman />} />
         </div>
-        <div className="text-green-600 hover:text-opacity-70 duration-300" data-aos='fade-left'>
-          <ToolsContainer
+        <div className="text-green-600 hover:text-opacity-70 duration-300" data-aos='fade-right'>
+          <NetWorkContainer
             title='Replit'
             icon={<FaNodeJs />} />
         </div>
         <div className="text-green-600 hover:text-opacity-70 duration-300" data-aos='fade-right' >
-          <ToolsContainer
-            title='Nodejs'
+          <NetWorkContainer
+            title='Replit'
             icon={<FaNodeJs />} />
         </div>
-        <div className="text-blue-500 hover:text-opacity-70 duration-300" data-aos='fade-left'>
-          <ToolsContainer
-            title='Tailwindcss'
-            icon={<RiTailwindCssFill />} />
+        <div className="text-green-600 hover:text-opacity-70 duration-300" data-aos='fade-right'>
+          <NetWorkContainer
+            title='Replit'
+            icon={<FaNodeJs />} />
         </div>
 
       </div>
@@ -72,5 +71,4 @@ const Tools = () => {
     </div>
   )
 }
-
-export default Tools
+export default Networks
