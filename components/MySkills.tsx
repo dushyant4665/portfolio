@@ -57,63 +57,57 @@ const MySkills = () => {
         <div className="flex gap-4 flex-wrap">
           <SkillsContainer
             title="Javascript"
-            link="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            link=""
           />
-          <SkillsContainer title="Reactjs" link="https://react.dev/" />
-          <SkillsContainer title="Nextjs" link="https://nextjs.org/" />
-          <SkillsContainer title="Nodejs" link="https://nodejs.org/en" />
+          <SkillsContainer title="Reactjs" link="" />
+          <SkillsContainer title="Nextjs" link="" />
+          <SkillsContainer title="Nodejs" link="" />
           <SkillsContainer
             title="Typescript"
-            link="https://www.typescriptlang.org/"
+            link=""
           />
-          <SkillsContainer title="Expressjs" link="https://expressjs.com/" />
+          <SkillsContainer title="Expressjs" link="" />
           <SkillsContainer title="Redux Toolkit" link="" />
-          <SkillsContainer title="MongoDB" link="https://www.mongodb.com/" />
+          <SkillsContainer title="MongoDB" link="" />
           <SkillsContainer
             title="Google Firebase"
-            link="https://firebase.google.com/"
+            link=""
           />
-          <SkillsContainer title="Tailwindcss" link="https://tailwindcss.com/" />
-          <SkillsContainer title="Sanity.io" link="https://www.sanity.io/" />
+          <SkillsContainer title="Tailwindcss" link="" />
+          <SkillsContainer title="Sanity.io" link="" />
           <SkillsContainer
             title="HTML5"
-            link="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
+            link=""
           />
           <SkillsContainer
             title="CSS3"
-            link="https://developer.mozilla.org/en-US/docs/Web/CSS"
+            link=""
           />
-          <SkillsContainer title="Azure" link="https://code.visualstudio.com/" />
+          <SkillsContainer title="Azure" link="" />
           <SkillsContainer
             title="AWS"
-            link="https://github.blog/2022-06-08-sunsetting-atom/"
+            link=""
           />
-          <SkillsContainer title="Git" link="https://git-scm.com/" />
-          <SkillsContainer title="Github" link="https://github.com/" />
-          <SkillsContainer title="" link="https://trello.com/en" />
-          <SkillsContainer title="Python" link="https://www.gitkraken.com/" />
-          <SkillsContainer title="UI Design" link="https://www.figma.com/" />
-          <SkillsContainer title="Figma" link="https://www.figma.com/" />
-          <SkillsContainer title="Canva" link="https://www.canva.com/" />
+          <SkillsContainer title="Git" link="" />
+          <SkillsContainer title="Github" link="" />
+          <SkillsContainer title="" link="" />
+          <SkillsContainer title="Python" link="" />
+          <SkillsContainer title="UI Design" link="" />
+          <SkillsContainer title="Figma" link="" />
+          <SkillsContainer title="Canva" link="" />
           <SkillsContainer
             title="Adobe"
-            link="https://www.adobe.com/products/illustrator/free-trial-download.html"
+            link=""
           />
-          <SkillsContainer title="Brand & LogoDesign" link="https://dribbble.com/" />
-          <SkillsContainer title="Website Design" link="https://themeforest.net/" />
-          <SkillsContainer title="Vercel" link="https://vercel.com/" />
-          <SkillsContainer title="netlify" link="https://www.netlify.com/" />
+          <SkillsContainer title="Brand & LogoDesign" link="" />
+          <SkillsContainer title="Website Design" link="" />
+          <SkillsContainer title="Vercel" link="" />
+          <SkillsContainer title="netlify" link="" />
+          <SkillsContainer title="GSAP" link="" />
+          <SkillsContainer title="Framer Motion" link="" />
+          <SkillsContainer title="Three.js " link="" />
         </div>
       </div>
     );
   };
-  
-  
-
-
-
-
-
-
-
 export default MySkills

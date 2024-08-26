@@ -15,13 +15,13 @@ const Tools = () => {
   return (
     <div className="wrapper space-y-10" data-aos='fade-right'>
       <Title text={"Developer Tools"}/>
-      <div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-[45px] place-items-center ml-8 mr-8'>
-        <div className=" text-blue-500 hover:text-opacity-70 duration-300 " data-aos='fade-right'>
+      <div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-[45px] place-items-center ml-8 mr-8 '>
+        <div className=" text-blue-500 hover:text-opacity-70 duration-300  " data-aos='fade-right'>
           <ToolsContainer
             title='VS Code'
             icon={<VscVscode />} />
         </div>
-        <div className="text-white hover:text-opacity-70 duration-300" data-aos='fade-left'>
+        <div className="text-white hover:text-opacity-70 duration-300 " data-aos='fade-right'>
           <ToolsContainer
             title='Intellij IDEA'
             icon={<SiIntellijidea />} />
@@ -31,7 +31,7 @@ const Tools = () => {
             title='Replit'
             icon={<SiReplit />} />
         </div>
-        <div className="text-gray-600 hover:text-opacity-70 duration-300" data-aos='fade-left'>
+        <div className="text-gray-600 hover:text-opacity-70 duration-300" data-aos='fade-right'>
           <ToolsContainer
             title='GitHub'
             icon={<FaGithub />} />
@@ -41,7 +41,7 @@ const Tools = () => {
             title='Firebase'
             icon={<IoLogoFirebase />} />
         </div>
-        <div className="text-green-700 hover:text-opacity-70 duration-300" data-aos='fade-left'>
+        <div className="text-green-700 hover:text-opacity-70 duration-300" data-aos='fade-right'>
           <ToolsContainer
             title='Mongodb'
             icon={<DiMongodb />} />
@@ -51,7 +51,7 @@ const Tools = () => {
             title='PostMan'
             icon={<SiPostman />} />
         </div>
-        <div className="text-green-600 hover:text-opacity-70 duration-300" data-aos='fade-left'>
+        <div className="text-green-600 hover:text-opacity-70 duration-300" data-aos='fade-right'>
           <ToolsContainer
             title='Replit'
             icon={<FaNodeJs />} />
@@ -61,7 +61,7 @@ const Tools = () => {
             title='Nodejs'
             icon={<FaNodeJs />} />
         </div>
-        <div className="text-blue-500 hover:text-opacity-70 duration-300" data-aos='fade-left'>
+        <div className="text-blue-500 hover:text-opacity-70 duration-300" data-aos='fade-right'>
           <ToolsContainer
             title='Tailwindcss'
             icon={<RiTailwindCssFill />} />

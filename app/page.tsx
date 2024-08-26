@@ -56,8 +56,9 @@ import Footer from '../components/Footer'
 import Tools from '@/components/Tools';
 import ContactForm from '../components/ContactForm';
 import Connect from '@/components/Connect';
-import Networks from '@/components/Networks'
+import Networking from '@/components/Networking'
 import Hosting from '@/components/Hosting'
+import Cloud from '@/components/Cloud';
 
 
 export default function Home() {
@@ -76,13 +77,13 @@ export default function Home() {
         <Top />
         <AboutMe />
         <Tools />
-        <Networks/>
         <Hosting/>
+        <Cloud/>
+        <Networking/>
         <MySkills />
         <Projects />
         <ContactForm />
         <Connect />
-    
       </div>
       <Footer/>
     </main>

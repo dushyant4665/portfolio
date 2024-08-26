@@ -4,7 +4,7 @@ import ContactTitle from './ContactTitle';
 import  {db} from '../app/firebaseConfig.js'
 import {motion  } from 'framer-motion'
 import SubmitBtn from "./Submitbtn";
-import toast from 'react-toastify'
+import {toast} from 'react-toastify'
 
 
 const Contact = () => {
