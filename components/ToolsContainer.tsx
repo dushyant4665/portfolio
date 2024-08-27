@@ -1,15 +1,22 @@
+import React from 'react';
 
-
-const ToolsContainer = ({title,icon}:props) => {
-  return (
-   <div>
-        <div className='items-center gap-8'>
-          <span className='w-12 h-12 rounded-full  flex items-center justify-center text-5xl'> {icon}</span>
-          <a href="">
-          <p className='text-lg font-semibold text-gray-400'>{title}</p>
-          </a>
-        </div>
-   </div> 
-  )
+// Define the props interface
+interface Props {
+  title: string;
+  icon: React.ReactNode;
 }
-export default ToolsContainer
+
+const ToolsContainer: React.FC<Props> = ({ title, icon }) => {
+  return (
+    <div className="flex items-center gap-8">
+      <span className="w-12 h-12 rounded-full flex items-center justify-center text-5xl">
+        {icon}
+      </span>
+      <a href="#" className="text-lg font-semibold text-gray-400 hover:text-gray-200 transition-colors">
+        {title}
+      </a>
+    </div>
+  );
+}
+
+export default ToolsContainer;
