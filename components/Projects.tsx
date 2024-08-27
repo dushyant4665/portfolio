@@ -7,7 +7,7 @@ const Project = () => {
   return (
     <div className='wrapper' data-aos="fade-in"
     data-duration='2000'>
-       <Title text={'Projects'}/>
+       <Title text={'Projects'} icon=''/>
          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center'>
          <ProjectsContainer
               img={projectIMG1.src} 
