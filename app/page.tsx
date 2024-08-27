@@ -1,49 +1,4 @@
-// import AboutMe from '@/components/AboutMe';
-// import Top from '../components/Top'
-// import MySkills from '../components/MySkills'
-// import Projects from '../components/Projects'
-// import '../globals.css';
-// import Tools from '@/components/Tools';
-// import ContactForm from '../components/ContactForm'
-// import Connect from '@/components/Connect';
-// import { useEffect } from 'react';
-// import 'aos/dist/aos.css';
 
-
-
-// import AOS from 'aos';
-
-// export default function Home({ Component, pageProps }) {
-
-//     useEffect(() => {
-//       AOS.init({
-//         duration: 1000,
-//       });
-//     }, []);
-
-  
-
-
-//   return (
-   
-
-//     <main className="w-full bg-gray-950 text-gray-300 px-4">
-//      <div className="max-w-screen-xl mx-auto lg:pt-10">
-
-//     <Top />
-//     <AboutMe/>
-//     <Tools />
-//     <MySkills/>
-//     <Projects/>
-//     <ContactForm/>
-//     <Connect/>
-
-//      </div>
-
-//      <Component {...pageProps} />
-//     </main>
-//   );  
-// }
 'use client'
 import {useEffect} from 'react';
 import 'aos/dist/aos.css';

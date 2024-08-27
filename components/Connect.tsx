@@ -12,13 +12,15 @@ const Connect = () => {
           I am always open to discussing your project, improving your online presence, optimizing your web infrastructure, or simply connecting with like-minded professionals. I'm here to help!
         </p>
         <a 
-          href="mailto:dushyantkhandelwal4665@gmail.com?subject=Let's%20Connect" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-red-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65"
-        >
-          Connect
-        </a>
+  href="mailto:dushyantkhandelwal4665@gmail.com?subject=Let%27s%20Connect" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-red-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65"
+>
+  Connect
+</a>
+
+
       </div>
 
       <div className="mt-10 flex justify-center flex-wrap gap-12">

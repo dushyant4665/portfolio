@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/image';
 import profile from '../images/profile.png'
 import AOS from 'aos'
 import 'aos/dist/aos.css' 
