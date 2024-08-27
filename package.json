@@ -25,6 +25,7 @@
     "react-icons": "^5.2.1",
     "react-intersection-observer": "^9.13.0",
     "react-toastify": "^10.0.5",
+    "sharp": "^0.33.5",
     "toaster": "^0.1.2",
     "toastify": "^2.0.1",
     "zod": "^3.23.8"

@@ -10,5 +10,4 @@ const Title = ({myTitle, des}:props) => {
     </div>
   );
 }
-
 export default Title

@@ -1,18 +1,21 @@
-import React from 'react'
+import React from 'react';
 
-const CloudContainer = ({title,icon}:props) => {
-    return (
-   
-    <div>
-    <div className='items-center gap-8'>
-      <span className='w-12 h-12 rounded-full  flex items-center justify-center text-5xl'> {icon}</span>
-      <a href="">
-      <p className='text-lg font-semibold text-gray-400'>{title}</p>
+interface CloudContainerProps {
+  title: string;
+  icon: React.ReactNode; // Accepts any valid React node
+}
+
+const CloudContainer: React.FC<CloudContainerProps> = ({ title, icon }) => {
+  return (
+    <div className="flex items-center gap-8"> {/* Aligns children with flex */}
+      <span className="w-12 h-12 rounded-full flex items-center justify-center text-5xl">
+        {icon}
+      </span>
+      <a href="#" className="text-lg font-semibold text-gray-400 hover:text-gray-600">
+        {title}
       </a>
     </div>
-</div> 
-    )
+  );
+};
 
-  }
-
-export default CloudContainer
+export default CloudContainer;
