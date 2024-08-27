@@ -11,7 +11,7 @@ const Cloud = () => {
     <div>
         <div className="wrapper space-y-10" data-aos='fade-right'>
       <Title text={"Cloud Skill"}/>
-      <div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-[45px] place-items-center ml-8 mr-8'>
+      <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-[45px] place-items-center ml-8 mr-8'>
         <div className=" text-yellow-700 hover:text-opacity-70 duration-300 " data-aos='fade-right'>
           <CloudContainer
             title='AWS'
