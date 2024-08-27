@@ -1,36 +1,31 @@
-import React from 'react';
-import Title from './Title';
-import NetworkingContainer from './NetworkingContainer';
 
-// Define the props interface
-interface NetworkingProps {
-  link: string;  // Add if needed, otherwise remove it from props
-  title: string; // Add if needed, otherwise remove it from props
-}
+// import SkillsContainer from './SkillsContainer'
+// import {SiJavascript} from 'react-icons/si'
+// import { GiSkills } from "react-icons/gi";
+import Title from "./Title";
+import NetworkingContainer from './NetworkingContainer'
 
-const Networking: React.FC<NetworkingProps> = ({ link, title }) => {
-  return (
-    <div className="wrapper space-y-10" data-aos='fade-right'>
-      <Title myTitle="Networking and Protocols" des={title} />
-      <div className='flex gap-4 flex-wrap'>
-        <div className="text-blue-500 hover:text-opacity-70 duration-300" data-aos='fade-right'>
-          <NetworkingContainer title='HTTP' />
-        </div>
-        <div className="text-white hover:text-opacity-70 duration-300" data-aos='fade-right'>
-          <NetworkingContainer title='HTTPS' />
-        </div>
-        <div className="text-orange-600 hover:text-opacity-70 duration-300" data-aos='fade-right'>
-          <NetworkingContainer title='FTP' />
-        </div>
-        <div className="text-green-600 hover:text-opacity-70 duration-300" data-aos='fade-right'>
-          <NetworkingContainer title='TCP/IP' />
-        </div>
-        <div className="text-yellow-600 hover:text-opacity-70 duration-300" data-aos='fade-right'>
-          <NetworkingContainer title='DNS' />
+
+const Networking = () => {
+ 
+    return (
+      <div className="wrapper" data-aos='fade-right'>
+        <Title text="Networking and Protocols" icon='' />
+        <div className="flex gap-4 flex-wrap">
+          <NetworkingContainer
+            title="HTTP" link=""/>
+          <NetworkingContainer 
+          title="HTTPS" link="" />
+          <NetworkingContainer 
+          title="FTP" link="" />
+          <NetworkingContainer 
+          title="TCP/IP" link="" />
+          <NetworkingContainer
+          title="DNS"
+          link=""
+          />
         </div>
       </div>
-    </div>
-  );
-}
-
-export default Networking;
+    );
+  };
+export default Networking

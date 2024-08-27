@@ -9,7 +9,7 @@ interface HostingContainerProps {
 const HostingContainer: React.FC<HostingContainerProps> = ({ title, icon }) => {
   return (
     <div>
-      <div className='items-center gap-8 flex'>
+      <div className='items-center gap-2 flex'>
         <span className='w-12 h-12 rounded-full flex items-center justify-center text-5xl'>
           {icon}
         </span>

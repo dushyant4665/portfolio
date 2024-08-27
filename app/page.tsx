@@ -27,21 +27,21 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="w-full bg-black text-gray-300 px-4 "data-aos="fade-up" data-duration='[1s]'>
-      <div className="max-w-screen-xl mx-auto lg:pt-10">
-        <Top />
-        <AboutMe />
-        <Tools />
-        <Hosting/>
-        <Cloud/>
-        <Networking/>
-        <MySkills />
-        <Projects />
-        <ContactForm />
-        <Connect />
-      </div>
-      <Footer/>
-    </main>
+    <main className="w-full bg-black text-gray-300 px-4" data-aos="fade-up" data-duration="[1s]">
+    <div className="max-w-screen-xl mx-auto lg:pt-10">
+      <Top />
+      <AboutMe />
+      <Tools />
+      <Hosting />
+      <Cloud />
+      <Networking link="https://example.com" title="Networking Link" /> {/* Provide the required props */}
+      <MySkills />
+      <Projects />
+      <ContactForm />
+      <Connect />
+    </div>
+    <Footer />
+  </main>
   );
 }
 

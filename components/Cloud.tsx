@@ -3,7 +3,7 @@ import CloudContainer from './CloudContainer'
 import Title from './Title' 
 import { FaAws } from "react-icons/fa";
 import { VscAzure } from "react-icons/vsc";
-import { SiFirebase } from 'react-icons/si';
+import { IoLogoFirebase } from "react-icons/io5";
 
 
 const Cloud = () => {
@@ -25,7 +25,7 @@ const Cloud = () => {
         <div className="text-yellow-600 hover:text-opacity-70 duration-300" data-aos='fade-right'>
           <CloudContainer
             title='Firebase'
-            icon={<SiFirebase />} />
+            icon={<IoLogoFirebase />} />
         </div>
        
 
