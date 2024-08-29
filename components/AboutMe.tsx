@@ -16,7 +16,7 @@ const AboutMe = () => {
 
 I am proficient in leveraging tools like Webpack, npm, and Git for efficient development and deployment processes. Beyond my core technical skills, I am also expanding my knowledge in Machine Learning, enhancing my ability to tackle complex challenges.
 
-I thrive in collaborative environments, working effectively with cross-functional teams, and I’m always ready to take on new challenges, adapt to emerging technologies, and deliver high-quality solutions.
+I thrive in collaborative environments, working effectively with cross-functional teams, and Im always ready to take on new challenges, adapt to emerging technologies, and deliver high-quality solutions.
         {/* <p data-aos="fade-right">
         I am always looking to improve my skills and stay up-to-date with the latest best practices in web development. I am excited to continue growing as a developer and making meaningful contributions to projects and teams.
         </p> */}
