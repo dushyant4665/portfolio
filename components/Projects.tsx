@@ -16,7 +16,7 @@ const Project = () => {
               <ProjectsContainer
               img={projectIMG2.src} 
               link={'https://flex-burn.vercel.app'}
-              text='Full Stack MERN Ecommerce Web App with Firbase Google Authentication And Stripe Payment Gateway Feature'/>
+              text='A pure reactjs workout app with firebase google authentication'/>
             
          </div>  
     </div>

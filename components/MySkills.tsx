@@ -1,6 +1,6 @@
 
 // import SkillsContainer from './SkillsContainer'
-import {SiJavascript} from 'react-icons/si'
+// import {SiJavascript} from 'react-icons/si'
 import { GiSkills } from "react-icons/gi";
 import Title from "./Title";
 import SkillsContainer from './SkillsContainer';

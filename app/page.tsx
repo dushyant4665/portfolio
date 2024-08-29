@@ -14,6 +14,8 @@ import Connect from '@/components/Connect';
 import Networking from '@/components/Networking'
 import Hosting from '@/components/Hosting'
 import Cloud from '@/components/Cloud';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 
 export default function Home() {
@@ -27,20 +29,23 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="w-full bg-black text-gray-300 px-4" data-aos="fade-up" data-duration="[1s]">
+    <main className="w-full bg-black text-gray-300 px-4" data-aos="fade-up" data-duration="[300ms]">
     <div className="max-w-screen-xl mx-auto lg:pt-10">
       <Top />
       <AboutMe />
       <Tools />
       <Hosting />
       <Cloud />
-      <Networking link="https://example.com" title="Networking Link" /> {/* Provide the required props */}
+      <Networking/> {/* Provide the required props */}
       <MySkills />
       <Projects />
       <ContactForm />
+   <ToastContainer/>
       <Connect />
     </div>
     <Footer />
+    
+
   </main>
   );
 }

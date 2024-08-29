@@ -9,17 +9,14 @@ const Connect = () => {
           Let us create awesome products!
         </h2>
         <p className="text-lg tracking-wide font-medium">
-          I am always open to discussing your project, improving your online presence, optimizing your web infrastructure, or simply connecting with like-minded professionals. I'm here to help!
+          I am always open to discussing your project, optimizing your web infrastructure, simply connect with like-minded professionals. I am here to help!
         </p>
-        <a 
-  href="mailto:dushyantkhandelwal4665@gmail.com?subject=Let%27s%20Connect" 
-  target="_blank" 
-  rel="noopener noreferrer"
-  className="group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-red-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65"
->
-  Connect
-</a>
-
+      
+   <a href="mailto:dushyantkhandelwal4665@gmail.com?subject=Let%27s%20Connect">
+          <button className="w-52 h-14 bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-950 text-xl font-bold text-white rounded-lg hover:from-indigo-950 hover:to-blue-600 duration-300">
+            Connect
+          </button>
+        </a>
 
       </div>
 
