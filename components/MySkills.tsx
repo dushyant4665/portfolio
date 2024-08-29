@@ -48,7 +48,7 @@ const MySkills = () => {
           />
           <SkillsContainer title="Git" link="" />
           <SkillsContainer title="Github" link="" />
-          <SkillsContainer title="" link="" />
+
           <SkillsContainer title="Python" link="" />
           <SkillsContainer title="UI Design" link="" />
           <SkillsContainer title="Figma" link="" />
