@@ -18,9 +18,7 @@ I am proficient in leveraging tools like Webpack, npm, and Git for efficient dev
 
 I thrive in collaborative environments, working effectively with cross-functional teams, and Im always ready to take on new challenges, adapt to emerging technologies, and deliver high-quality solutions.
         </p>
-        {/* <p data-aos="fade-right">
-        I am always looking to improve my skills and stay up-to-date with the latest best practices in web development. I am excited to continue growing as a developer and making meaningful contributions to projects and teams.
-        </p> */}
+      
       </div>
     </div>
   )
