@@ -1,9 +1,9 @@
 import Title from './Title'
-// import {FaNodeJs} from 'react-icons/fa'
+import {FaNodeJs} from 'react-icons/fa'
 import { SiNetlify } from "react-icons/si";
-// import { SiReplit } from "react-icons/si";
+import { SiReplit } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
-
+import { SiCoronarenderer } from "react-icons/si";
 import { IoLogoVercel } from "react-icons/io5";
 import HostingContainer from './HostingCotainer';
 
@@ -28,6 +28,11 @@ const Hosting = () => {
           <HostingContainer
             title='Firebase'
             icon={<IoLogoFirebase />} />
+        </div>
+        <div className="text-emerald-500 hover:text-opacity-70 duration-300" data-aos='fade-right'>
+          <HostingContainer
+            title='render'
+            icon={<SiCoronarenderer />} />
         </div>
        
 
