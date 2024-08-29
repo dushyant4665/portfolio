@@ -10,7 +10,7 @@ const Networking = () => {
  
     return (
       <div className="wrapper" data-aos='fade-right'>
-        <Title text="Networking and Protocols" icon='' />
+        <Title text="Networking" icon='' />
         <div className="flex gap-4 flex-wrap">
           <NetworkingContainer
             title="HTTP" link=""/>
