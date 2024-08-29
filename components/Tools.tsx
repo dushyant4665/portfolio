@@ -2,6 +2,7 @@ import Title from './Title'
 import {FaNodeJs} from 'react-icons/fa'
 import ToolsContainer from './ToolsContainer'
 import {SiJavascript} from 'react-icons/si'
+
 import { VscVscode } from "react-icons/vsc";
 import { SiIntellijidea } from "react-icons/si";
 import { SiReplit } from "react-icons/si";
@@ -53,14 +54,10 @@ const Tools = () => {
         </div>
         <div className="text-green-600 hover:text-opacity-70 duration-300" data-aos='fade-right'>
           <ToolsContainer
-            title='Replit'
-            icon={<FaNodeJs />} />
-        </div>
-        <div className="text-green-600 hover:text-opacity-70 duration-300" data-aos='fade-right' >
-          <ToolsContainer
             title='Nodejs'
             icon={<FaNodeJs />} />
         </div>
+       
         <div className="text-blue-500 hover:text-opacity-70 duration-300" data-aos='fade-right'>
           <ToolsContainer
             title='Tailwindcss'
