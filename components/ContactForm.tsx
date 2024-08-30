@@ -76,13 +76,15 @@ const ContactForm = () => {
               maxLength={500}
               placeholder="Your email"
             />
-            <textarea
-              className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
-              name="message"
-              placeholder="Your message"
-              required
-              maxLength={5000}
-            />
+         <textarea
+  className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none 
+            w-full sm:h-40 md:h-52 lg:h-64 xl:h-72"
+  name="message"
+  placeholder="Your message"
+  required
+  maxLength={5000}
+/>
+
             <SubmitBtn pending={pending} />
           </form>
         </motion.section>
