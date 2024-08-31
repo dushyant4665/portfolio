@@ -2,7 +2,7 @@ import React from 'react';
 
 interface CloudContainerProps {
   title: string;
-  icon: React.ReactNode; // Accepts any valid React node
+  icon: React.ReactNode; 
 }
 
 const CloudContainer: React.FC<CloudContainerProps> = ({ title, icon }) => {
