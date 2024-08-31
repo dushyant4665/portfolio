@@ -10,7 +10,7 @@ export default async function handler(req, res) {
       }
 
       const client = await clientPromise;
-      const db = client.db('portfolioContact'); // Ensure the database name is correct
+      const db = client.db('portfolioContact');
       const collection = db.collection('contactFormMessages');
 
       const result = await collection.insertOne({ senderEmail, message, createdAt: new Date() });
