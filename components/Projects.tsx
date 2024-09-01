@@ -16,7 +16,7 @@ const Project = () => {
               <ProjectsContainer
               img={projectIMG2.src} 
               link={'https://flex-burn.vercel.app'}
-              text='A pure reactjs workout app with firebase google authentication'/>
+              text='A reactjs workout app with firebase google authentication'/>
             
          </div>  
     </div>
