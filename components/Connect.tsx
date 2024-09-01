@@ -9,7 +9,7 @@ const Connect = () => {
           Let us create awesome products!
         </h2>
         <p className="text-lg tracking-wide font-medium">
-          I am always open to discussing your project, optimizing your web infrastructure, simply connect with like-minded professionals. I am here to help!
+         I am always ready to discuss your project and optimize your web infrastructure. Connect with like-minded professionals-I m here to help!
         </p>
       
    <a href="mailto:dushyantkhandelwal4665@gmail.com?subject=Let%27s%20Connect">
