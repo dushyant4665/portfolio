@@ -17,7 +17,10 @@ const Project = () => {
               img={projectIMG2.src} 
               link={'https://flex-burn.vercel.app'}
               text='A reactjs workout app with firebase google authentication'/>
-            
+           <ProjectsContainer
+              img={projectIMG3.src} 
+              link={'https://blogcrisp1.netlify.app/'}
+              text='A blog static web app Using HTML CSS and JAVASCRIPT'/>
          </div>  
     </div>
   )
