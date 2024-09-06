@@ -3,6 +3,7 @@ import Title from './Title'
 import projectIMG1 from '../images/projectIMG1.png'
 import ProjectsContainer from './ProjectsContainer'
 import projectIMG2 from '../images/projectIMG2.png'
+import projectIMG2 from '../images/projectIMG3.png'
 const Project = () => {
   return (
     <div className='wrapper' data-aos="fade-in"
