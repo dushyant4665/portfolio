@@ -17,8 +17,8 @@ const Top = () => {
       <div className='w-3/4 flex flex-col gap-1 '>
         <h5 className='text-4xl font-bold text-white md:text-left text-center' >Dushyant <span className='text-4xl'>Khandelwal</span></h5>
         <h3 className='text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-red-300 to-indigo-300 tracking-wide text-center md:text-left '>A Full Stack Developer</h3>
-        <p className='text-base tracking-wide text-center md:text-left'>Computer Science Student
-         </p>
+{/*         <p className='text-base tracking-wide text-center md:text-left'>Computer Science Studen
+         </p> */}
       </div>
     </div>
     </>
