@@ -14,8 +14,8 @@ const Networking = () => {
         <div className="flex gap-4 flex-wrap">
           <NetworkingContainer
             title="HTTP" link=""/>
-          <NetworkingContainer 
-          title="HTTPS" link="" />
+{/*           <NetworkingContainer 
+          title="HTTPS" link="" /> */}
           <NetworkingContainer 
           title="FTP" link="" />
           <NetworkingContainer 
