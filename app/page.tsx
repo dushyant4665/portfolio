@@ -36,7 +36,7 @@ export default function Home() {
       <Tools />
       <Hosting />
       <Cloud />
-      <Networking/> {/* Provide the required props */}
+{/*       <Networking/>  */}
       <MySkills />
       <Projects />
       <ContactForm />
