@@ -11,7 +11,7 @@ import Footer from '../components/Footer'
 import Tools from '@/components/Tools';
 import ContactForm from '../components/ContactForm';
 import Connect from '@/components/Connect';
-import Networking from '@/components/Networking'
+// import Networking from '@/components/Networking'
 import Hosting from '@/components/Hosting'
 import Cloud from '@/components/Cloud';
 import 'react-toastify/dist/ReactToastify.css';
