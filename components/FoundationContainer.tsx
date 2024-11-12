@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Define the props interface
+
 interface Props {
   title: string;
   link: string;
