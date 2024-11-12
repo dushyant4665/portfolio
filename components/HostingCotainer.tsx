@@ -1,9 +1,8 @@
 import React from 'react';
 
-// Define the props interface
 interface HostingContainerProps {
   title: string;
-  icon: React.ReactNode; // Assuming `icon` is a React component or an element
+  icon: React.ReactNode; 
 }
 
 const HostingContainer: React.FC<HostingContainerProps> = ({ title, icon }) => {
