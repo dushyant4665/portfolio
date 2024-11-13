@@ -48,8 +48,8 @@ const Foundation = () => {
             <Title text="Computer Science Foundations" icon={<GiSkills className="text-2xl text-indigo-500" />} />
             <div className="flex gap-4 flex-wrap">
                 <FoundationContainer title="Data Structures & Algorithms" link="" />
-                <span className="text-gray-500 font-semibold self-center">and</span>
-                <FoundationContainer title="Object-Oriented Programming Concepts" link="" />
+{/*                 <span className="text-gray-500 font-semibold self-center">and</span> */}
+                <FoundationContainer title="Object-Oriented Programming" link="" />
             </div>
         </div>
     );
