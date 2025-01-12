@@ -2,6 +2,7 @@ import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import type { Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
+import { Container } from "postcss";
 
 export const ParticleBackground = () => {
     const particlesInit = useCallback(async (engine: Engine) => {
@@ -10,7 +11,7 @@ export const ParticleBackground = () => {
 
     const particlesLoaded = useCallback(
       async (container: Container | undefined) => {
-        // await console.log(container);
+        await console.log(Container);
       },
       []
     );
