@@ -52,4 +52,28 @@ input, textarea {
     left: 0;
     z-index: -10;
   }
-  
+
+  .cursor,
+.cursor-trail {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: transform 0.15s ease-out, background-color 0.2s ease;
+}
+
+.cursor {
+  background-color: rgba(255, 182, 193, 0.8); /* Soft pink */
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.6); /* Glow effect */
+}
+
+.cursor-trail {
+  width: 25px;
+  height: 25px;
+  background-color: rgba(255, 240, 245, 0.5); /* Light pink */
+  filter: blur(10px);
+  transition: transform 0.1s ease-out;
+}
