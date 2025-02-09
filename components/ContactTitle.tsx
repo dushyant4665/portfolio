@@ -1,6 +1,6 @@
 import React from 'react';
 
-// Define the props interface
+
 interface TitleProps {
   myTitle: string;
   des: string;
