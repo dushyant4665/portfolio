@@ -32,15 +32,15 @@ export default function Home() {
     <main 
     className="w-full text-gray-300 px-4 relative"
     >
-      {/* Particle Background */}
-      {/* <div className="absolute inset-0 -z-10"> */}
-        <ParticleBackground />
-      {/* </div> */}
 
-      {/* Custom Cursor */}
+
+        <ParticleBackground />
+
+
+
       <CustomCursor />
 
-      {/* Main Content */}
+
       <div className="max-w-screen-xl mx-auto lg:pt-10 relative z-10">
         <Top />
         <AboutMe />
@@ -55,7 +55,6 @@ export default function Home() {
         <Connect />
       </div>
 
-      {/* Footer */}
       <Footer />
     </main>
   );
