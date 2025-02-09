@@ -1,7 +1,7 @@
 import React from 'react';
 import { FiArrowUpRight } from "react-icons/fi";
 
-// Define the props interface
+
 interface ConnectContainerProps {
   socialText: string;
   link: string;
