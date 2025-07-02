@@ -13,28 +13,14 @@ const SOCIALS = [
 ];
 const CONTACTS = [
   { icon: <FaLinkedin />, label: "LinkedIn", href: "https://linkedin.com/in/dushyant-khandelwal-516319221" },
-  { icon: <FaTwitter />, label: "Twitter", href: "https://twitter.com/" },
+  { icon: <FaTwitter />, label: "Twitter", href: "https://twitter.com/dushyant4665" },
   { icon: <FaEnvelope />, label: "Email", href: `mailto:${EMAIL}` },
 ];
 const SKILLS = [
   "TypeScript", "Next.js", "React", "Node.js", "WebGL", "Three.js", "GraphQL", "WebSockets", "Docker", "CI/CD", "AWS", "GCP", "Distributed Systems", "AI/ML", "Security", "Cloud", "Microservices",
-  "PostgreSQL", "MongoDB", "Supabase", "Firebase", "Redis", "Kafka", "RabbitMQ", "Elasticsearch", "Prisma", "NextAuth", "Zod", "TailwindCSS", "Postman", "VS Code"
+  "PostgreSQL", "MongoDB", "Supabase", "Firebase", "Redis", "RabbitMQ", "Elasticsearch", "Prisma", "NextAuth", "Zod", "TailwindCSS", "Postman", "VS Code"
 ];
 const PROJECTS = [
-  {
-    name: "CRISP Shopping",
-    desc: "E-commerce. Stripe. Real-time. Scalable infra.",
-    tech: ['MERN', 'React', 'Node.js', 'MongoDB', 'Stripe', 'Firebase'],
-    github: "https://github.com/dushyant4665/crispShopping-ecomp-mern",
-    live: "https://crisp-shopping.vercel.app/",
-  },
-  {
-    name: "CRISP GPT Chrome Extension",
-    desc: "AI Chrome extension. Mistral LLM, Secure.",
-    tech: ['Chrome Ext', 'Mistral AI', 'Express', 'Node.js', 'MongoDB'],
-    github: "https://github.com/dushyant4665/CRISP_GPT_chrome_extension",
-    live: "https://chrome.google.com/webstore/detail/crisp-gpt/",
-  },
   {
     name: "Earth Visualization Globe",
     desc: "3D Earth. Real-time. Three.js. WebGL.",
@@ -42,6 +28,22 @@ const PROJECTS = [
     github: "https://github.com/dushyant4665/earth-visualization",
     live: "https://earth-visualization.vercel.app/",
   },
+  {
+    name: "CRISP GPT Chrome Extension",
+    desc: "AI Chrome extension. Mistral LLM, Secure.",
+    tech: ['Chrome Ext', 'Mistral AI', 'Express', 'Node.js', 'MongoDB'],
+    github: "https://github.com/dushyant4665/CRISP_GPT_chrome_extension",
+    // live: "https://chrome.google.com/webstore/detail/crisp-gpt/",
+  },
+  {
+    name: "CRISP Shopping",
+    desc: "E-commerce. Stripe. Real-time. Scalable infra.",
+    tech: ['MERN', 'React', 'Node.js', 'MongoDB', 'Stripe', 'Firebase'],
+    github: "https://github.com/dushyant4665/crispShopping-ecomp-mern",
+    live: "https://crispshopping-mern-project-dushyant.vercel.app/",
+  },
+
+
 ];
 
 export default function Home() {
@@ -69,7 +71,7 @@ export default function Home() {
         transition={{ duration: 0.6 }}
       >
         <motion.h1
-          className="text-4xl sm:text-6xl font-extrabold mb-2 tracking-tight bg-gradient-to-r from-[#3b82f6] via-[#6366f1] to-[#a855f7] bg-clip-text text-transparent animate-gradient-x"
+          className="text-3xl xs:text-4xl sm:text-6xl font-extrabold leading-tight mb-2 tracking-tight bg-gradient-to-r from-[#3b82f6] via-[#6366f1] to-[#a855f7] bg-clip-text text-transparent animate-gradient-x drop-shadow-lg"
           style={{ fontFamily: "var(--font-heading)" }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -101,7 +103,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
         >
-          <span className="text-lg sm:text-xl font-bold text-[#a5b4fc] select-all">{EMAIL}</span>
+          <span className="text-lg sm:text-sm font-bold text-[#a5b4fc] select-all">{EMAIL}</span>
         </motion.div>
       </motion.section>
 
@@ -143,8 +145,7 @@ export default function Home() {
           {PROJECTS.map((p, i) => (
             <motion.div
               key={p.name}
-              className="min-w-[90vw] max-w-xs sm:min-w-[320px] sm:max-w-xs bg-[#18181b] rounded-2xl p-4 sm:p-5 border-2 border-transparent bg-clip-padding relative flex flex-col justify-between shadow-lg hover:shadow-2xl hover:border-gradient-to-r hover:from-[#6366f1] hover:to-[#a855f7] transition-all duration-300 group"
-              style={{ boxShadow: '0 4px 32px 0 rgba(99,102,241,0.10)' }}
+              className="min-w-[90vw] max-w-xs sm:min-w-[320px] sm:max-w-xs bg-[#18181b] rounded-2xl p-4 sm:p-5 border border-[#23234a] flex flex-col justify-between shadow-md transition-all duration-200 group"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -164,10 +165,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mt-auto">
-                <a href={p.github} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-[#23234a] text-[#a5b4fc] font-bold text-xs sm:text-sm hover:bg-[#6366f1] hover:text-white transition-colors shadow-md">
+                <a href={p.github} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-[#23234a] text-[#a5b4fc] font-bold text-xs sm:text-sm hover:bg-[#6366f1] hover:text-white transition-colors shadow-sm">
                   <FaGithub className="text-base sm:text-lg" /> GitHub
                 </a>
-                <a href={p.live} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white font-bold text-xs sm:text-sm hover:from-[#a855f7] hover:to-[#6366f1] transition-colors shadow-md">
+                <a href={p.live} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-[#23234a] text-[#a5b4fc] font-bold text-xs sm:text-sm hover:bg-[#a855f7] hover:text-white transition-colors shadow-sm">
                   <FaExternalLinkAlt className="text-base sm:text-lg" /> Live
                 </a>
               </div>
