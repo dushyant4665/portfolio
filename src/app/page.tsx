@@ -1,8 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter, FaFilePdf, FaEnvelope, FaExternalLinkAlt, FaRocket } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaExternalLinkAlt } from "react-icons/fa";
 import type { ReactNode } from "react";
-import { FaX } from "react-icons/fa6";
 
 const NAME = "Dushyant Khandelwal";
 const EMAIL = "dushyantkhandelwal4665@gmail.com";
@@ -195,34 +194,6 @@ export default function Home() {
     </main>
   );
 }
-
-interface SectionProps {
-  title: string;
-  children: ReactNode;
-  delay?: number;
-  className?: string;
-}
-const Section = ({ title, children, delay = 0, className = '' }: SectionProps) => (
-  <motion.section
-    className={`w-full max-w-2xl ${className}`}
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, amount: 0.2 }}
-    transition={{ duration: 0.6, delay }}
-  >
-    <motion.h2 
-      className="text-xl font-bold mb-8 text-center relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-1/4 after:w-1/2 after:h-0.5 after:bg-gradient-to-r after:from-transparent after:via-[#6366f1] after:to-transparent"
-      style={{ fontFamily: "var(--font-heading)" }}
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay: delay + 0.1 }}
-    >
-      {title}
-    </motion.h2>
-    {children}
-  </motion.section>
-);
 
 interface SocialLinkProps {
   icon: ReactNode;
