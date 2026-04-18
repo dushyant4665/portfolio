@@ -20,7 +20,7 @@ function Hero() {
             </h1>
 
             <p className="hero-page__subtitle">
-              Full-stack developer and SaaS builder focused on real-time collaboration platforms, AI-powered systems, and products that ship with Stripe billing.
+              Full-stack AI builder. I ship systems that think, learn, and scale.
             </p>
           </div>
 

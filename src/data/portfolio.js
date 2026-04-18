@@ -139,22 +139,22 @@ export const labProjects = [
 export const capabilityGroups = [
   {
     title: 'Build',
-    items: ['SaaS platforms & dashboards', 'Real-time collaboration tools', '3D web experiences & WebGL'],
+    items: ['AI systems', 'Real-time tools', '3D experiences'],
   },
   {
     title: 'Engineer',
-    items: ['React/Next.js + Node.js full-stack', 'WebSocket real-time systems', 'Three.js & 3D visualization'],
+    items: ['Full-stack', 'WebSocket systems', 'WebGL/Three.js'],
   },
   {
-    title: 'Scale',
-    items: ['Stripe payments & subscriptions', 'LLM workflows & AI agents', 'Production deployment'],
+    title: 'Ship',
+    items: ['Payments', 'AI agents', 'Production'],
   },
 ]
 
 export const proofPoints = [
-  { value: 'Full-Stack SaaS', label: 'TeamPulse: Real-time collaboration platform with payments' },
-  { value: '3+ Years', label: 'Building production web, AI, and SaaS systems' },
-  { value: 'End-to-End', label: 'Concept, interface, backend, deployment & support' },
+  { value: 'AI Builder', label: 'Systems that think and scale' },
+  { value: '3+ Years', label: 'Production code, shipped' },
+  { value: 'End-to-End', label: 'Idea to deployment' },
 ]
 
 export const contactLinks = [
