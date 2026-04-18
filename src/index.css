@@ -1080,6 +1080,131 @@ section {
   }
 }
 
+@media (max-width: 480px) {
+  :root {
+    --container: minmax(12px, 1fr) repeat(12, minmax(0, 1fr)) minmax(12px, 1fr);
+    --gutter: 12px;
+  }
+
+  .hero-page__title {
+    font-size: clamp(26px, 8vw, 32px);
+    line-height: 1.05;
+  }
+
+  .hero-page__subtitle {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .hero-page__connect-list {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hero-page__connect-item {
+    min-height: 44px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .projects__eyebrow {
+    font-size: 10px;
+  }
+
+  .projects__title {
+    font-size: clamp(22px, 7vw, 28px);
+  }
+
+  .project-card__title {
+    font-size: clamp(18px, 5vw, 22px);
+  }
+
+  .project-card__chip {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  .project-card__actions {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .project-card__link {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .stoic-card__title {
+    font-size: clamp(20px, 6vw, 24px);
+  }
+
+  .stoic-card__cta {
+    font-size: 12px;
+  }
+
+  .about__heading,
+  .footer__cta-text {
+    font-size: clamp(24px, 8vw, 32px);
+  }
+
+  .cursor-trail {
+    min-height: 50vh;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-page__title {
+    font-size: 24px;
+  }
+
+  .hero-page__subtitle {
+    font-size: 12px;
+  }
+
+  .hero-page__monogram {
+    font-size: 28px;
+  }
+
+  .project-card__frame {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .project-card__title {
+    font-size: 16px;
+  }
+
+  .project-card__summary {
+    font-size: 11px;
+    padding: 8px 10px;
+  }
+
+  .project-card__chip {
+    font-size: 9px;
+    padding: 3px 6px;
+  }
+}
+
+@media (min-width: 2560px) {
+  :root {
+    --container: minmax(40px, 1fr) repeat(12, minmax(0, 140px)) minmax(40px, 1fr);
+  }
+
+  .hero-page__title {
+    font-size: clamp(48px, 4vw, 72px);
+  }
+
+  .projects__title,
+  .about__heading,
+  .footer__cta-text {
+    font-size: clamp(36px, 3vw, 56px);
+  }
+
+  .project-card__title {
+    font-size: clamp(28px, 2vw, 40px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1092,5 +1217,32 @@ section {
 
   .site-shell {
     opacity: 1;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .cursor {
+    display: none !important;
+  }
+
+  body,
+  button,
+  a,
+  [role='button'],
+  .magnetic {
+    cursor: pointer !important;
+  }
+
+  .project-card__hover-panel {
+    opacity: 1;
+    transform: none;
+    position: relative;
+    inset: auto;
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .project-card__veil {
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
   }
 }
