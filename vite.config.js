@@ -14,7 +14,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          animation: ['gsap', '@gsap/react', 'lenis', '@studio-freight/lenis'],
+          animation: ['gsap', '@gsap/react', 'lenis'],
           three: ['three']
         }
       }
