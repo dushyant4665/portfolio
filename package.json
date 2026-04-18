@@ -1,0 +1,24 @@
+{
+  "name": "dushyant-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.1",
+    "@studio-freight/lenis": "1.0.45",
+    "gsap": "3.12.5",
+    "lenis": "1.0.45",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "0.159.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.19"
+  }
+}
