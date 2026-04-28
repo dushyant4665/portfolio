@@ -5,8 +5,21 @@ function CustomCursor() {
   const labelRef = useRef(null)
   const [isActive, setIsActive] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
+  const [supportsFinePointer, setSupportsFinePointer] = useState(false)
 
   useEffect(() => {
+    const pointerQuery = window.matchMedia('(hover: hover) and (pointer: fine)')
+    const updatePointerSupport = () => setSupportsFinePointer(pointerQuery.matches)
+
+    updatePointerSupport()
+    pointerQuery.addEventListener('change', updatePointerSupport)
+
+    return () => pointerQuery.removeEventListener('change', updatePointerSupport)
+  }, [])
+
+  useEffect(() => {
+    if (!supportsFinePointer) return undefined
+
     const cursor = cursorRef.current
     const label = labelRef.current
     if (!cursor || !label) return undefined
@@ -59,7 +72,11 @@ function CustomCursor() {
       document.removeEventListener('pointerout', onPointerOut)
       window.cancelAnimationFrame(frameId)
     }
-  }, [])
+  }, [supportsFinePointer])
+
+  if (!supportsFinePointer) {
+    return null
+  }
 
   return (
     <div

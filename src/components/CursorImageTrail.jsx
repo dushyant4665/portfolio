@@ -123,10 +123,6 @@ function CursorImageTrail() {
   const handleMouseLeave = () => {
     setIsInside(false)
     document.body.classList.remove('cursor-trail-active')
-
-    if (cursorDotRef.current) {
-      cursorDotRef.current.style.transform = 'translate3d(-9999px, -9999px, 0)'
-    }
   }
 
   const handleMouseMove = (event) => {

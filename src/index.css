@@ -26,11 +26,15 @@
 html {
   background: var(--bg);
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
+  width: 100%;
   min-height: 100vh;
+  overflow-x: hidden;
   font-family: var(--font-body);
   color: var(--fg);
   background:
@@ -89,6 +93,7 @@ section {
 }
 
 .layout-grid {
+  width: 100%;
   display: grid;
   grid-template-columns: var(--container);
 }
@@ -99,7 +104,7 @@ section {
 }
 
 .section {
-  padding: clamp(96px, 12vw, 160px) 0;
+  padding: clamp(72px, 10vw, 150px) 0;
 }
 
 .section-header {
@@ -109,7 +114,7 @@ section {
 }
 
 .section-header--split {
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, auto);
   align-items: end;
   gap: 24px;
 }
@@ -126,18 +131,20 @@ section {
 }
 
 .t-display {
-  font-size: clamp(48px, 6vw, 100px);
+  font-size: clamp(38px, 6vw, 100px);
   font-family: var(--font-display);
   font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: -0.03em;
+  line-height: 0.98;
+  overflow-wrap: break-word;
+  text-wrap: balance;
 }
 
 .t-heading {
-  font-size: clamp(24px, 3vw, 48px);
+  font-size: clamp(24px, 3vw, 46px);
   font-family: var(--font-display);
   font-weight: 600;
-  line-height: 1.05;
+  line-height: 1.08;
+  overflow-wrap: break-word;
 }
 
 .t-body {
@@ -147,10 +154,11 @@ section {
 
 .t-label {
   font-size: 11px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   font-family: var(--font-body);
   color: var(--fg-dim);
+  overflow-wrap: anywhere;
 }
 
 .t-mono {
@@ -190,6 +198,8 @@ section {
     border-color var(--duration-fast) ease,
     color var(--duration-fast) ease,
     transform var(--duration-fast) ease;
+  text-align: center;
+  overflow-wrap: anywhere;
 }
 
 .chip {
@@ -261,13 +271,13 @@ section {
 }
 
 .hero-page {
-  min-height: 100vh;
+  min-height: 100svh;
   padding: clamp(18px, 2vw, 26px) 0;
   background: #020202;
 }
 
 .hero-page__shell {
-  min-height: calc(100vh - clamp(36px, 4vw, 52px));
+  min-height: calc(100svh - clamp(36px, 4vw, 52px));
   display: grid;
   grid-template-columns: minmax(0, 0.86fr) minmax(0, 1fr);
   gap: clamp(20px, 2.6vw, 36px);
@@ -303,14 +313,14 @@ section {
 
 .hero-page__title {
   margin: 0;
-  max-width: 10ch;
+  max-width: 11ch;
   font-family: var(--font-display);
-  font-size: clamp(34px, 4.1vw, 62px);
+  font-size: clamp(34px, 4vw, 60px);
   font-weight: 400;
-  line-height: 1.02;
-  letter-spacing: -0.06em;
+  line-height: 1.04;
   color: rgba(255, 255, 255, 0.44);
   text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 .hero-page__title-strong {
@@ -344,15 +354,17 @@ section {
 
 .hero-page__connect-list {
   display: grid;
+  gap: 2px;
 }
 
 .hero-page__connect-item {
-  min-height: 42px;
+  min-height: 44px;
   display: inline-flex;
   align-items: center;
   font-family: var(--font-display);
   font-size: clamp(16px, 1vw, 19px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  overflow-wrap: anywhere;
 }
 
 .hero-page__visual {
@@ -365,6 +377,7 @@ section {
   width: min(100%, 760px);
   max-width: 100%;
   aspect-ratio: 4 / 5.1;
+  max-height: calc(100svh - clamp(56px, 7vw, 92px));
   min-height: 0;
   overflow: hidden;
   background: transparent;
@@ -379,7 +392,7 @@ section {
 
 .cursor-trail {
   position: relative;
-  min-height: 84vh;
+  min-height: 76svh;
   overflow: hidden;
   background:
     radial-gradient(circle at 20% 20%, rgba(200, 255, 0, 0.06), transparent 30%),
@@ -435,8 +448,8 @@ section {
 
 .cursor-trail__dot {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   z-index: 10001;
   width: 6px;
   height: 6px;
@@ -444,7 +457,7 @@ section {
   background: #fff;
   pointer-events: none;
   opacity: 0;
-  transform: translate3d(-9999px, -9999px, 0);
+  transform: translate3d(-50%, -50%, 0);
 }
 
 .cursor-trail__dot.is-visible {
@@ -463,9 +476,9 @@ section {
 
 .stoic-card {
   position: relative;
-  min-height: 480px;
+  min-height: clamp(440px, 36vw, 520px);
   display: grid;
-  grid-template-rows: minmax(300px, 1.25fr) auto auto;
+  grid-template-rows: minmax(260px, 1fr) auto auto;
   gap: 0;
   border-radius: 28px;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -488,7 +501,7 @@ section {
 
 .stoic-card__image {
   position: relative;
-  min-height: 320px;
+  min-height: clamp(240px, 25vw, 320px);
   background-position: center;
   background-size: cover;
   filter: saturate(0.1) brightness(0.78) contrast(1.08);
@@ -511,6 +524,7 @@ section {
 
 .stoic-card__meta {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 12px;
   color: var(--fg-dim);
@@ -518,7 +532,7 @@ section {
 
 .stoic-card__quote {
   margin: 0;
-  max-width: 16ch;
+  max-width: 18ch;
   font-size: clamp(1.55rem, 1.35rem + 0.7vw, 2.35rem);
   line-height: 1.06;
 }
@@ -532,6 +546,7 @@ section {
   padding: 8px 10px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.06);
+  overflow-wrap: anywhere;
 }
 
 .stoic-card__footer {
@@ -564,13 +579,14 @@ section {
 }
 
 .projects__title {
-  max-width: 12ch;
+  max-width: 13ch;
   font-family: var(--font-display);
-  font-size: clamp(42px, 5vw, 82px);
+  font-size: clamp(38px, 5vw, 82px);
   font-weight: 600;
-  line-height: 0.94;
-  letter-spacing: -0.05em;
+  line-height: 0.98;
   color: rgba(245, 240, 232, 0.98);
+  overflow-wrap: break-word;
+  text-wrap: balance;
 }
 
 .projects__intro {
@@ -602,6 +618,7 @@ section {
 .project-card__frame {
   position: relative;
   height: auto;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -639,6 +656,7 @@ section {
 
 .project-card__meta {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
@@ -653,7 +671,8 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: rgba(215, 198, 160, 0.92);
   background: rgba(0, 0, 0, 0.42);
-  letter-spacing: 0.16em;
+  letter-spacing: 0.1em;
+  overflow-wrap: anywhere;
 }
 
 .project-card__visual {
@@ -745,6 +764,7 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.02);
   color: rgba(232, 227, 216, 0.72);
+  overflow-wrap: anywhere;
 }
 
 .project-card:hover .project-card__media,
@@ -773,7 +793,7 @@ section {
 }
 
 .about__title {
-  max-width: 8ch;
+  max-width: 14ch;
 }
 
 .about__stack {
@@ -791,8 +811,8 @@ section {
 .about__mail {
   width: 100%;
   max-width: 100%;
-  font-size: clamp(28px, 3.2vw, 56px);
-  line-height: 0.98;
+  font-size: clamp(22px, 2vw, 34px);
+  line-height: 1.08;
   overflow-wrap: anywhere;
   word-break: break-word;
 }
@@ -821,6 +841,11 @@ section {
 
 .footer__mail {
   width: fit-content;
+  max-width: 100%;
+  font-size: clamp(22px, 2.4vw, 36px);
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .footer__actions {
@@ -840,6 +865,9 @@ section {
   min-height: 72px;
   justify-content: flex-start;
   border-radius: 22px;
+  flex-wrap: wrap;
+  min-width: 0;
+  text-align: left;
 }
 
 .footer__meta {
@@ -920,6 +948,11 @@ section {
     min-height: auto;
   }
 
+  .section-header--split {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
   .hero-page__shell,
   .projects__heading,
   .projects__feed,
@@ -932,6 +965,7 @@ section {
   .hero-page__shell {
     min-height: auto;
     gap: 20px;
+    align-items: start;
   }
 
   .hero-page__content {
@@ -951,7 +985,13 @@ section {
 
   .hero-page__image-frame {
     width: min(100%, 720px);
-    aspect-ratio: 4 / 4.8;
+    aspect-ratio: 4 / 4.6;
+    max-height: 70svh;
+  }
+
+  .projects__title,
+  .about__title {
+    max-width: 16ch;
   }
 
   .project-card,
@@ -982,6 +1022,11 @@ section {
 }
 
 @media (max-width: 767px) {
+  :root {
+    --container: minmax(16px, 1fr) repeat(12, minmax(0, 1fr)) minmax(16px, 1fr);
+    --gutter: 14px;
+  }
+
   body {
     cursor: auto;
   }
@@ -998,7 +1043,7 @@ section {
   }
 
   .hero-page {
-    padding: 12px 0 16px;
+    padding: 14px 0 18px;
   }
 
   .hero-page__shell {
@@ -1015,7 +1060,8 @@ section {
 
   .hero-page__title {
     max-width: 100%;
-    font-size: clamp(30px, 9vw, 44px);
+    font-size: clamp(32px, 9.5vw, 48px);
+    line-height: 1.06;
   }
 
   .hero-page__subtitle {
@@ -1023,17 +1069,71 @@ section {
   }
 
   .hero-page__connect-item {
-    min-height: 38px;
+    min-height: 44px;
     font-size: 15px;
   }
 
   .hero-page__image-frame {
     width: 100%;
-    aspect-ratio: 4 / 4.6;
+    aspect-ratio: 4 / 4.25;
+    max-height: none;
   }
 
   .cursor-trail {
-    min-height: 64vh;
+    min-height: auto;
+  }
+
+  .cursor-trail__copy {
+    padding: 72px 0;
+  }
+
+  .cursor-trail__prompt,
+  .cursor-trail__dot,
+  .cursor-trail__card {
+    display: none;
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+
+  .t-display {
+    font-size: clamp(34px, 10vw, 54px);
+    line-height: 1.04;
+  }
+
+  .t-heading {
+    font-size: clamp(24px, 8vw, 36px);
+  }
+
+  .section-link,
+  .button-link,
+  .project-card__link {
+    width: 100%;
+  }
+
+  .work__grid,
+  .projects__feed {
+    gap: 16px;
+  }
+
+  .stoic-card {
+    min-height: auto;
+    border-radius: 18px;
+    grid-template-rows: auto auto auto;
+  }
+
+  .stoic-card__image {
+    min-height: 220px;
+  }
+
+  .stoic-card__content {
+    padding: 20px 18px;
+  }
+
+  .stoic-card__quote {
+    max-width: none;
+    font-size: clamp(24px, 8vw, 34px);
   }
 
   .project-card__frame {
@@ -1047,9 +1147,13 @@ section {
   }
 
   .project-card__visual {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 4 / 3;
     min-height: auto;
     max-height: none;
+  }
+
+  .project-card--featured .project-card__visual {
+    aspect-ratio: 4 / 3;
   }
 
   .project-card__meta,
@@ -1060,8 +1164,10 @@ section {
   }
 
   .project-card__hover-panel {
-    inset: auto 10px 10px 10px;
-    width: calc(100% - 20px);
+    position: relative;
+    inset: auto;
+    width: 100%;
+    margin-top: 12px;
     opacity: 1;
     transform: none;
   }
@@ -1072,23 +1178,34 @@ section {
   }
 
   .stoic-card {
-    min-height: 420px;
+    min-height: auto;
   }
 
   .about__stack {
-    padding: 24px;
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .footer__mail,
+  .about__mail {
+    font-size: clamp(22px, 7vw, 34px);
+    line-height: 1.08;
+  }
+
+  .footer__link {
+    min-height: 64px;
   }
 }
 
 @media (max-width: 480px) {
   :root {
-    --container: minmax(12px, 1fr) repeat(12, minmax(0, 1fr)) minmax(12px, 1fr);
+    --container: minmax(14px, 1fr) repeat(12, minmax(0, 1fr)) minmax(14px, 1fr);
     --gutter: 12px;
   }
 
   .hero-page__title {
-    font-size: clamp(26px, 8vw, 32px);
-    line-height: 1.05;
+    font-size: clamp(30px, 9.2vw, 38px);
+    line-height: 1.08;
   }
 
   .hero-page__subtitle {
@@ -1097,14 +1214,14 @@ section {
   }
 
   .hero-page__connect-list {
-    flex-direction: column;
+    display: grid;
     gap: 8px;
   }
 
   .hero-page__connect-item {
     min-height: 44px;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .projects__eyebrow {
@@ -1112,7 +1229,7 @@ section {
   }
 
   .projects__title {
-    font-size: clamp(22px, 7vw, 28px);
+    font-size: clamp(32px, 10vw, 42px);
   }
 
   .project-card__title {
@@ -1131,30 +1248,31 @@ section {
 
   .project-card__link {
     font-size: 12px;
-    padding: 6px 10px;
+    padding: 9px 10px;
   }
 
-  .stoic-card__title {
-    font-size: clamp(20px, 6vw, 24px);
+  .project-card__tag,
+  .project-card__chip {
+    max-width: 100%;
   }
 
-  .stoic-card__cta {
-    font-size: 12px;
+  .stoic-card__footer {
+    padding: 0 18px 18px;
   }
 
-  .about__heading,
-  .footer__cta-text {
-    font-size: clamp(24px, 8vw, 32px);
+  .footer__actions,
+  .project-card__actions {
+    width: 100%;
   }
 
   .cursor-trail {
-    min-height: 50vh;
+    min-height: auto;
   }
 }
 
 @media (max-width: 375px) {
   .hero-page__title {
-    font-size: 24px;
+    font-size: 29px;
   }
 
   .hero-page__subtitle {
@@ -1171,7 +1289,7 @@ section {
   }
 
   .project-card__title {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .project-card__summary {
@@ -1181,7 +1299,7 @@ section {
 
   .project-card__chip {
     font-size: 9px;
-    padding: 3px 6px;
+    padding: 5px 7px;
   }
 }
 
