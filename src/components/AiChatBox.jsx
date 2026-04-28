@@ -56,7 +56,7 @@ function getLocalAnswer(input) {
   return `Dushyant is a full-stack developer and AI builder from Jaipur, India. He builds clean digital products, AI systems, real-time tools, and 3D web experiences. You can reach him at ${email}.`
 }
 
-function AiChatBox() {
+function AiChatBox({ autoOpenDelay = 1200 }) {
   const [isOpen, setIsOpen] = useState(false)
   const [messages, setMessages] = useState(initialMessages)
   const [input, setInput] = useState('')
@@ -64,9 +64,9 @@ function AiChatBox() {
   const messagesRef = useRef(null)
 
   useEffect(() => {
-    const popupTimer = window.setTimeout(() => setIsOpen(true), 2200)
+    const popupTimer = window.setTimeout(() => setIsOpen(true), autoOpenDelay)
     return () => window.clearTimeout(popupTimer)
-  }, [])
+  }, [autoOpenDelay])
 
   useEffect(() => {
     const container = messagesRef.current

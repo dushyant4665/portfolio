@@ -41,7 +41,7 @@ function App() {
         <About />
         <Footer />
       </main>
-      <AiChatBox />
+      {preloaderDone && <AiChatBox />}
     </>
   )
 }
