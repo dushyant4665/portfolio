@@ -17,6 +17,7 @@ const lenis = new Lenis({
   wheelMultiplier: 0.8,
   touchMultiplier: 1.5,
   infinite: false,
+  prevent: (node) => Boolean(node.closest('[data-lenis-prevent]')),
 })
 
 lenis.on('scroll', ScrollTrigger.update)

@@ -7,6 +7,7 @@ import Work from './components/Work'
 import Projects from './components/Projects'
 import About from './components/About'
 import Footer from './components/Footer'
+import AiChatBox from './components/AiChatBox'
 
 function App() {
   const [preloaderDone, setPreloaderDone] = useState(
@@ -40,6 +41,7 @@ function App() {
         <About />
         <Footer />
       </main>
+      <AiChatBox />
     </>
   )
 }
