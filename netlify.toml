@@ -4,7 +4,10 @@
   functions = "netlify/functions"
 
 [functions]
-  node_bundler = "zisi"
+  node_bundler = "esbuild"
+
+[functions.chat]
+  included_files = ["src/data/**"]
 
 [[redirects]]
   from = "/api/chat"

@@ -20,6 +20,8 @@ function AiChatBox({ autoOpenDelay = 1200 }) {
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const messagesRef = useRef(null)
+  const tokenQueueRef = useRef([])
+  const isTypingRef = useRef(false)
 
   useEffect(() => {
     const popupTimer = window.setTimeout(() => setIsOpen(true), autoOpenDelay)
@@ -38,7 +40,15 @@ function AiChatBox({ autoOpenDelay = 1200 }) {
     return 'Online'
   }, [isLoading])
 
-  const appendToLastAssistantMessage = (token) => {
+  const processTokenQueue = () => {
+    if (tokenQueueRef.current.length === 0) {
+      isTypingRef.current = false
+      return
+    }
+
+    isTypingRef.current = true
+    const token = tokenQueueRef.current.shift()
+
     setMessages((current) => {
       const next = [...current]
       const last = next[next.length - 1]
@@ -50,6 +60,16 @@ function AiChatBox({ autoOpenDelay = 1200 }) {
 
       return [...next, { role: 'assistant', content: token }]
     })
+
+    // Typing speed: 30ms per token (adjustable)
+    setTimeout(processTokenQueue, 30)
+  }
+
+  const appendToLastAssistantMessage = (token) => {
+    tokenQueueRef.current.push(token)
+    if (!isTypingRef.current) {
+      processTokenQueue()
+    }
   }
 
   const readEventStream = async (response) => {
@@ -98,20 +118,14 @@ function AiChatBox({ autoOpenDelay = 1200 }) {
   }
 
   const animateAnswer = (fullText) => {
-    let index = 0
-    const speed = 18
-
-    const tick = () => {
-      if (index < fullText.length) {
-        const chunkSize = Math.min(2, fullText.length - index)
-        const chunk = fullText.slice(index, index + chunkSize)
-        index += chunkSize
-        appendToLastAssistantMessage(chunk)
-        window.setTimeout(tick, speed)
-      }
+    // Push all characters to queue with slight batching for natural typing
+    const chunkSize = 2
+    for (let i = 0; i < fullText.length; i += chunkSize) {
+      tokenQueueRef.current.push(fullText.slice(i, i + chunkSize))
     }
-
-    tick()
+    if (!isTypingRef.current) {
+      processTokenQueue()
+    }
   }
 
   const sendMessage = async (text = input) => {
