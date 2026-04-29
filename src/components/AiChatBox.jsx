@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { assistantKnowledge } from '../data/assistantKnowledge'
 
 const starterPrompts = [
   'What services do you offer?',
@@ -14,47 +13,6 @@ const initialMessages = [
       "Hey, I am Dushyant's AI assistant. Ask me about his services, projects, tech stack, or how to start a project.",
   },
 ]
-
-function getLocalAnswer(input) {
-  const query = input.toLowerCase()
-  const email = assistantKnowledge.owner.email
-  const locationWords = ['where', 'from', 'belong', 'belongs', 'based', 'live', 'location', 'city']
-  const hasWord = (...words) => words.some((word) => new RegExp(`\\b${word}\\b`, 'i').test(query))
-
-  if (
-    hasWord('hi', 'hello', 'hey', 'yo', 'sup') ||
-    query.includes('kya haal') ||
-    query.includes('kaise ho') ||
-    query.includes('aur bhai')
-  ) {
-    return `Sab badhiya. Main Dushyant ka portfolio assistant hoon. Services, projects, tech stack, ya contact ke baare mein pooch sakte ho.`
-  }
-
-  if (hasWord('contact', 'email', 'hire', 'connect') || query.includes('kaise contact')) {
-    return `You can contact Dushyant at ${email}. He is open to freelance work, product builds, frontend systems, and AI workflow projects.`
-  }
-
-  if (locationWords.some((word) => query.includes(word))) {
-    return `Dushyant is from ${assistantKnowledge.owner.location}.`
-  }
-
-  if (hasWord('service', 'services', 'offer', 'offers', 'build', 'builds', 'work') || query.includes('kya banate')) {
-    return `Dushyant offers portfolio websites, full-stack products, AI-backed workflows, real-time collaboration tools, automation systems, and Three.js/WebGL experiences. For a project, email ${email}.`
-  }
-
-  if (hasWord('ai', 'project', 'projects', 'portfolio', 'demo', 'case')) {
-    const project =
-      assistantKnowledge.projects.find((item) => item.title === 'Self-Evolving Codebase') ||
-      assistantKnowledge.projects[0]
-    return `${project.title} is a strong AI example: ${project.summary} Stack: ${project.stack.join(', ')}.`
-  }
-
-  if (hasWord('stack', 'tech', 'technology', 'tools', 'skills')) {
-    return 'His stack includes React, Next.js, TypeScript, Node.js, Socket.IO, Supabase, MongoDB, Firebase, Stripe, Three.js, WebGL, GSAP, and AI tooling.'
-  }
-
-  return `Dushyant is a full-stack developer and AI builder from Jaipur, India. He builds clean digital products, AI systems, real-time tools, and 3D web experiences. You can reach him at ${email}.`
-}
 
 function AiChatBox({ autoOpenDelay = 1200 }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -139,6 +97,23 @@ function AiChatBox({ autoOpenDelay = 1200 }) {
     return answer.trim()
   }
 
+  const animateAnswer = (fullText) => {
+    let index = 0
+    const speed = 18
+
+    const tick = () => {
+      if (index < fullText.length) {
+        const chunkSize = Math.min(2, fullText.length - index)
+        const chunk = fullText.slice(index, index + chunkSize)
+        index += chunkSize
+        appendToLastAssistantMessage(chunk)
+        window.setTimeout(tick, speed)
+      }
+    }
+
+    tick()
+  }
+
   const sendMessage = async (text = input) => {
     const trimmed = text.trim()
     if (!trimmed || isLoading) return
@@ -172,10 +147,13 @@ function AiChatBox({ autoOpenDelay = 1200 }) {
       }
 
       const data = await response.json()
-      const answer = data.answer || getLocalAnswer(trimmed)
-      setMessages([...nextMessages, { role: 'assistant', content: answer }])
-    } catch {
-      setMessages([...nextMessages, { role: 'assistant', content: getLocalAnswer(trimmed) }])
+      if (data.error) {
+        throw new Error(data.error)
+      }
+      const answer = data.answer || "I'm having trouble connecting to my knowledge base. Please try again in a moment."
+      animateAnswer(answer)
+    } catch (error) {
+      setMessages([...nextMessages, { role: 'assistant', content: "Sorry, I'm temporarily unavailable. You can reach Dushyant directly at dushyantkhandelwal4665@gmail.com" }])
     } finally {
       setIsLoading(false)
     }

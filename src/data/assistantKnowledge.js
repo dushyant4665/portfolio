@@ -14,8 +14,15 @@ export const assistantKnowledge = {
     location: 'Jaipur, India',
     role: 'Full-stack developer and AI builder',
     email: 'dushyantkhandelwal4665@gmail.com',
+    github: 'https://github.com/dushyant4665',
     tone:
       'Direct, confident, helpful, concise, and focused on getting visitors to the right project or contact path.',
+  },
+  techStack: {
+    frontend: ['React', 'Next.js 14', 'TypeScript', 'Tailwind CSS', 'GSAP', 'Three.js', 'WebGL'],
+    backend: ['Node.js', 'Express', 'Socket.IO', 'Supabase', 'MongoDB', 'Firebase'],
+    ai: ['OpenAI API', 'Gemini', 'AI Agents', 'LangChain', 'Streaming APIs'],
+    tools: ['Git', 'Vercel', 'Netlify', 'Stripe', 'Figma', 'Vite'],
   },
   positioning:
     'Dushyant builds clean digital products, AI-backed systems, real-time tools, 3D experiences, and production-ready interfaces that ship.',
@@ -47,6 +54,9 @@ export function buildAssistantContext() {
   const proofLines = assistantKnowledge.proofPoints
     .map((proof) => `- ${proof.value}: ${proof.label}`)
     .join('\n')
+  const stackLines = Object.entries(assistantKnowledge.techStack)
+    .map(([category, items]) => `- ${category}: ${items.join(', ')}`)
+    .join('\n')
 
   return `
 You are the AI assistant on Dushyant Khandelwal's portfolio website.
@@ -56,7 +66,11 @@ Owner:
 - Role: ${assistantKnowledge.owner.role}
 - Location: ${assistantKnowledge.owner.location}
 - Email: ${assistantKnowledge.owner.email}
+- GitHub: ${assistantKnowledge.owner.github}
 - Positioning: ${assistantKnowledge.positioning}
+
+Tech Stack:
+${stackLines}
 
 Services:
 ${serviceLines}
@@ -70,6 +84,10 @@ ${proofLines}
 Projects:
 ${projectLines}
 
+Contact:
+- Email: ${assistantKnowledge.owner.email}
+- GitHub: ${assistantKnowledge.owner.github}
+
 Rules:
 - Answer as Dushyant's helpful portfolio assistant.
 - Match the visitor's language and tone. If they ask in Hindi or Hinglish, reply naturally in Hinglish.
@@ -77,6 +95,8 @@ Rules:
 - Keep replies short, specific, and useful.
 - If a visitor asks to hire, collaborate, discuss pricing, or start a project, direct them to email ${assistantKnowledge.owner.email}.
 - Recommend the most relevant project when asked about examples.
+- When asked about a specific technology, mention which projects use it and how.
 - Do not invent private information, prices, timelines, clients, or credentials that are not in this context.
+- Always be enthusiastic about Dushyant's work but stay factual.
 `.trim()
 }
